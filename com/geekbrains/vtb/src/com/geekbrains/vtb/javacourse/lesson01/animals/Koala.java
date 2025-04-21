@@ -8,14 +8,14 @@ public class Koala extends Animal {
         koalaCount++;
         animalCount++;
         this.name = name;
-        this.runningLimitation = 0;
-        this.swimmingLimitation = 0;
+        this.maxRunDistance = 0;
+        this.maxSwimDistance = 0;
     }
 
     public void run(int distance) {
         if (distance < 0) {
             System.out.println("Задано некорректное число");
-        } else if (distance > runningLimitation) {
+        } else if (distance > maxRunDistance) {
             System.out.println(name + " не умеет бегать.");
         } else {
             System.out.println(name + " пробежал(а) " + distance + " м.");
@@ -25,7 +25,7 @@ public class Koala extends Animal {
     public void swim(int distance) {
         if (distance < 0) {
             System.out.println("Задано некорректное число");
-        } else if (distance > swimmingLimitation) {
+        } else if (distance > maxSwimDistance) {
             System.out.println(name + " не умеет плавать.");
         } else {
             System.out.println(name + " проплыл(а) " + distance + " м.");

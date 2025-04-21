@@ -8,7 +8,7 @@ public class Tiger extends Animal {
         tigerCount++;
         animalCount++;
         this.name = name;
-        this.runningLimitation = 350;
-        this.swimmingLimitation = 200;
+        this.maxRunDistance = 350;
+        this.maxSwimDistance = 200;
     }
 }
