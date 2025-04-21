@@ -8,7 +8,7 @@ public class Dog extends Animal {
         dogCount++;
         animalCount++;
         this.name = name;
-        this.runningLimitation = 500;
-        this.swimmingLimitation = 10;
+        this.maxRunDistance = 500;
+        this.maxSwimDistance = 10;
     }
 }

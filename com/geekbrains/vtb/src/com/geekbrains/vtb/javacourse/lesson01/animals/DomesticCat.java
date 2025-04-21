@@ -8,15 +8,15 @@ public class DomesticCat extends Animal {
         catCount++;
         animalCount++;
         this.name = name;
-        this.runningLimitation = 200;
-        this.swimmingLimitation = 0;
+        this.maxRunDistance = 200;
+        this.maxSwimDistance = 0;
     }
 
     @Override
     public void swim(int distance) {
         if (distance < 0) {
             System.out.println("Задано некорректное число");
-        } else if (distance > swimmingLimitation) {
+        } else if (distance > maxSwimDistance) {
             System.out.println(name + " не умеет плавать.");
         } else {
             System.out.println(name + " проплыл(а) " + distance + " м.");
