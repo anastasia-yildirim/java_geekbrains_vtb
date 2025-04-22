@@ -1,9 +1,0 @@
-# IntelliJ project files
-.idea/
-*.iml
-
-# IntelliJ build output
-/out/
-
-### Mac OS ###
-.DS_Store
