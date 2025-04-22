@@ -18,13 +18,13 @@ public abstract class Animal {
         }
     }
 
-    public void swim(int distance) {
-        if (distance < 0) {
+    public void swim(int meters) {
+        if (meters < 0) {
             System.out.println("Задано некорректное число");
-        } else if (distance > swimmingLimitation) {
+        } else if (meters > swimmingLimitation) {
             System.out.println(name + " не смог(ла) справиться с дистанцией.");
         } else {
-            System.out.println(name + " проплыл(а) " + distance + " м.");
+            System.out.println(name + " проплыл(а) " + meters + " м.");
         }
     }
 }
