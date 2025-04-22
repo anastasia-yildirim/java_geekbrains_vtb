@@ -8,7 +8,7 @@ public class Beaber extends Animal {
         beaberCount++;
         animalCount++;
         this.name = name;
-        this.maxRunDistance = 1;
-        this.maxSwimDistance = 500;
+        this.runningLimitation = 1;
+        this.swimmingLimitation = 500;
     }
 }
