@@ -2,8 +2,6 @@ package com.geekbrains.vtb.javacourse.lesson01;
 
 import com.geekbrains.vtb.javacourse.lesson01.animals.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 import static com.geekbrains.vtb.javacourse.lesson01.animals.Animal.animalCount;
@@ -25,27 +23,26 @@ public class Main {
      */
 
     public static void main(String[] args) {
-        List<Animal> animals = createAnimals();
+        Animal[] animals = createAnimals();
         makeAnimalsMove(animals);
         System.out.println();
         printAnimalCountInfo();
     }
 
-    public static List<Animal> createAnimals() {
-        List<Animal> animals = new ArrayList<>();
-        animals.add(new DomesticCat("Вася"));
-        animals.add(new Dog("Одри"));
-        animals.add(new Dog("Тор"));
-        animals.add(new Dog("Тяпа"));
-        animals.add(new DomesticCat("Симба"));
-        animals.add(new Koala("Инь-Ян"));
-        animals.add(new Tiger("Тигран"));
-        animals.add(new Beaber("Джастин"));
+    public static Animal[] createAnimals() {
 
-        return animals;
+        return new Animal[] { new DomesticCat("Вася"),
+                new Dog("Одри"),
+                new Dog("Тор"),
+                new Dog("Тяпа"),
+                new DomesticCat("Симба"),
+                new Koala("Инь-Ян"),
+                new Tiger("Тигран"),
+                new Beaber("Джастин")
+        };
     }
 
-    public static void makeAnimalsMove(List<Animal> animals) {
+    public static void makeAnimalsMove(Animal[] animals) {
         for (Animal animal : animals) {
             animal.run(new Random().nextInt(-50, 501));
             animal.swim(new Random().nextInt(-50, 501));
